@@ -1,0 +1,47 @@
+
+<ion-header>
+</ion-header>
+ 
+<ion-content >
+    <div class="pik">
+    <img src="assets/logo2.png">
+    </div>
+ <ion-card>
+     <ion-card-header>
+         <a>LOGIN</a> 
+     </ion-card-header>
+        <ion-card-content class="login-form">
+            <ion-list no-line>
+               <ion-item>
+                <ion-label><ion-icon name="person"></ion-icon></ion-label>
+                <ion-input [(ngModel)]="email" placeholder="Correo" type="email" ></ion-input>
+              </ion-item>
+               <ion-item>
+                <ion-label><ion-icon name="lock"></ion-icon></ion-label>
+                <ion-input [(ngModel)]="password" placeholder="contrasena" type="password" ></ion-input>
+              </ion-item>
+ 
+            </ion-list>
+  
+            <button ion-button block color="greena" (click)="Login()">INGRESAR</button>
+
+             <b>NO TIENES CUENTA?</b>
+
+                <button ion-button block icon-left color="greena" (click)="goToSignup()">
+                <ion-icon name="mail"></ion-icon>
+                 Registrate</button>
+
+          </ion-card-content>
+ </ion-card>
+</ion-content>
+<ion-footer>
+<div padding>
+<button ion-button block icon-left color="facebook" (click)="loginFacebook()">
+    <ion-icon name="logo-facebook"></ion-icon>
+    Registrarte con Facebook</button>
+
+    <button ion-button block icon-left color="gmailc" (click)="loginGoogle()">
+    <ion-icon name="logo-google"></ion-icon>
+    Registrarte con Google</button>
+</div>
+</ion-footer>
